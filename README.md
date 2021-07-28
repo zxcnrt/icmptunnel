@@ -1,9 +1,7 @@
 # icmptunnel [![Build Status](https://travis-ci.org/DhavalKapil/icmptunnel.svg?branch=master)](https://travis-ci.org/DhavalKapil/icmptunnel)
 
 > Transparently tunnel your IP traffic through ICMP echo and reply packets.
-
-'icmptunnel' works by encapsulating your IP traffic in ICMP echo packets and sending them to your own proxy server. The proxy server decapsulates the packet and forwards the IP traffic. The incoming IP packets which are destined for the client are again encapsulated in ICMP reply packets and sent back to the client. The IP traffic is sent in the 'data' field of ICMP packets.
-
+好的
 [RFC 792](http://www.ietf.org/rfc/rfc792.txt), which is IETF's rules governing ICMP packets, allows for an arbitrary data length for any type 0 (echo reply) or 8 (echo message) ICMP packets.
 
 So basically the client machine uses only the ICMP protocol to communicate with the proxy server. Applications running on the client machine are oblivious to this fact and work seamlessly.
